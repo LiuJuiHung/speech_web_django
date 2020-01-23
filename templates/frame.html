@@ -1,0 +1,265 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <title>Speech Emotion Recognition</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+
+{#    <title>Hello, world!</title>#}
+</head>
+
+<body>
+{#    <!-- Navbar -->#}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+{#            <!-- 品牌圖案 -->#}
+            <a class="navbar-brand" href="#">
+                <img class="barImg" src="{% static 'image/qqq.png' %}" alt="qqq">
+            </a>
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn bar-btn-outline my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+{#    <!-- Emotion Block -->#}
+    <div class="page-container mt-5">
+        <div class="row">
+            <div class="col-2">
+{#                <!-- List -->#}
+                <div class="list-group" id="list-tab" role="tablist">
+                    <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list"
+                        href="#emoji_face" role="tab" aria-controls="home"><b>Group Emoji</b></a>
+                    <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list"
+                        href="#high_chart" role="tab" aria-controls="profile"><b>Group XXXXX</b></a>
+                    <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list"
+                        href="#list-messages" role="tab" aria-controls="messages"><b>C</b></a>
+                    <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list"
+                        href="#list-settings" role="tab" aria-controls="settings"><b>D</b></a>
+                </div>
+            </div>
+            <div class="col-10">
+                <div class="tab-content" id="nav-tabContent">
+                    <!-- Group Emotion Block (Emoji)-->
+                    <div class="tab-pane fade show active" id="emoji_face" role="tabpanel"
+                        aria-labelledby="list-home-list">
+                        <div class="row text-center">
+                            <div class="col-4">
+                                <div class="card">
+                                    <img class="emojiImg" src="{% static 'image/qqq.png' %}"  alt="qqq">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Group 1</h5>
+                                        <p class="card-text">Emotion</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="card">
+                                    <img class="emojiImg" src="{% static 'image/qqq.png' %}"  alt="qqq">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Group 2</h5>
+                                        <p class="card-text">Emotion</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="card">
+                                    <img class="emojiImg" src="{% static 'image/qqq.png' %}" alt="qqq">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Group 3</h5>
+                                        <p class="card-text">Emotion</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-4 text-center">
+                            <div class="col-4">
+                                <div class="card">
+                                    <img class="emojiImg" src="{% static 'image/qqq.png' %}"  alt="qqq">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Group 4</h5>
+                                        <p class="card-text">Emotion</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="card">
+                                    <img class="emojiImg" src="{% static 'image/qqq.png' %}"  alt="qqq">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Group 5</h5>
+                                        <p class="card-text">Emotion</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="card">
+                                    <img class="emojiImg" src="{% static 'image/qqq.png' %}"  alt="qqq">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Group 6</h5>
+                                        <p class="card-text">Emotion</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+{#                    <!-- Group Emotion Chart -->#}
+                    <div class="tab-pane fade" id="high_chart" role="tabpanel" aria-labelledby="list-profile-list">
+                        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+                        <script src="https://code.highcharts.com/highcharts.js"></script>
+                        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+                        <script src="https://code.highcharts.com/modules/export-data.js"></script>
+                        <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+                        <div class="row text-center">
+                            <div class="col-4">
+                                <figure class="highcharts-figure">
+                                    <div id="container"></div>
+                                    <p class="highcharts-description">
+                                    </p>
+                                </figure>
+                            </div>
+
+                            <div class="col-4">
+                                <figure class="highcharts-figure">
+                                    <div id="container1"></div>
+                                    <p class="highcharts-description">
+                                    </p>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
+                        abc</div>
+                    <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
+                        123</div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+{#    <!-- Optional JavaScript -->#}
+{#    <!-- jQuery first, then Popper.js, then Bootstrap JS -->#}
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
+    <script>
+        var chart_data = [{
+            name: 'Brands',
+            colorByPoint: true,
+            data: [{
+                name: 'Chrome',
+                y: 61.41,
+                sliced: true,
+                selected: true
+            }, {
+                name: 'Internet Explorer',
+                y: 11.84
+            }, {
+                name: 'Firefox',
+                y: 10.85
+            }, {
+                name: 'Edge',
+                y: 4.67
+            }, {
+                name: 'Safari',
+                y: 4.18
+            }, {
+                name: 'Other',
+                y: 7.05
+            }]
+        }]
+
+        Highcharts.chart('container1', {
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'pie'
+            },
+            title: {
+                text: 'Browser market shares in January, 2020'
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            accessibility: {
+                point: {
+                    valueSuffix: '%'
+                }
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: false
+                    },
+                    showInLegend: true
+                }
+            },
+            series: chart_data
+        });
+
+
+        Highcharts.chart('container', {
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'pie'
+            },
+            title: {
+                text: 'Browser market shares in January, 2020'
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            accessibility: {
+                point: {
+                    valueSuffix: '%'
+                }
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: false
+                    },
+                    showInLegend: true
+                }
+            },
+            series: chart_data
+        });
+
+    </script>
+</body>
+
+</html>
